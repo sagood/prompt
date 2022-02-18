@@ -86,7 +86,6 @@ plugins=(
     macos
     zsh-autosuggestions
     python
-    sudo
     zsh-syntax-highlighting
 )
 
@@ -139,4 +138,18 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+alias rm=trash
+alias r=trash
+alias rl='ls ~/.Trash'
+alias ur=undelfile
+undelfile()
+{
+  mv -i ~/.Trash/$@ ./
+}
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
